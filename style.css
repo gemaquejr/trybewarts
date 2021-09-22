@@ -16,8 +16,6 @@ body {
 
 .header h1 {
   color: white;
-  font-weight: 2px;
-
 }
 
 .trybewarts-login {
@@ -41,7 +39,6 @@ body {
   width: 120px;
   border-radius: 5px;
   color: white;
-  font-weight: 2px;
   font-family: serif;
   border: none;
 }
