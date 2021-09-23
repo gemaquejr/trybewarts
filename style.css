@@ -138,4 +138,16 @@ hr {
   color: white;
   font-family: serif;
   border: none;
+  margin-bottom: 20px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(46, 58, 56);
+  height: 50px;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  padding-top: 12px;
 }
