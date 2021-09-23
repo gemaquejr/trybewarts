@@ -2,7 +2,6 @@ body {
   margin: 0;
   padding: 0;
   font-family: serif;
-  font-weight: bold;
 }
 
 .header {
@@ -47,13 +46,12 @@ body {
 
 .content {
   display: flex;
-  background-color: #E8E8E8;
+  background-color: rgb(230, 240, 249);
 }
 
 #form-house {
   max-width: 700px;
   flex-wrap: wrap;
-  flex-direction: column;
   text-align: center;
 }
 
@@ -69,7 +67,7 @@ body {
 
 }
 
-#form-house input{ 
+#form-house input {
   height: 30px;
   width: 250px;
   border-radius: 5px;
@@ -77,7 +75,8 @@ body {
   border: none;
   font-family: serif;
 }
-#form-house select{ 
+
+#form-house select {
   height: 30px;
   width: 210px;
   border-radius: 5px;
@@ -96,7 +95,6 @@ hr {
   max-width: 140px;
   display: inline;
   flex-wrap: wrap;
-  flex-direction: column;
   padding: 5px;
 }
 
@@ -111,6 +109,7 @@ hr {
   display: flex;
   padding: 5px;
 }
+
 #avaliation {
   align-items: center;
 }
