@@ -128,3 +128,14 @@ hr {
   border: none;
   font-family: serif;
 }
+
+#submit-btn {
+  background-color: purple;
+  margin: 20px;
+  height: 32px;
+  width: 550px;
+  border-radius: 5px;
+  color: white;
+  font-family: serif;
+  border: none;
+}
