@@ -6,9 +6,9 @@ const btnSubmit = document.querySelector('#submit-btn');
 const textArea = document.querySelector('textarea');
 const count = document.querySelector('#counter');
 
-textArea.addEventListener('input', () => {
-  const inputed = textArea.value;
-  count.innerText = inputed.length;
+textArea.addEventListener('keyup', () => {
+  const limit = 500 - textArea.value.length;
+  count.innerText = limit;
 });
 
 btnLogin.addEventListener('click', () => {
