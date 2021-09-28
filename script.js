@@ -25,3 +25,8 @@ agreed.addEventListener('click', (event) => {
     btnSubmit.removeAttribute('disabled');
   }
 });
+
+function sendForm() {
+  agreed.innerHTML = '';
+  agreed.innerHTML += `<p>Nome: ${name.value} </p>`
+}
