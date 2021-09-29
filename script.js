@@ -45,6 +45,5 @@ btnSubmit.addEventListener('click', (event) => {
   form.innerHTML = `${name.innerText} 
   ${emailB.innerText} 
   ${casa.innerText} 
-  Família: ${femSel}
-  Matérias: ${materia}`;
+  Família: ${femSel}`;
 });
