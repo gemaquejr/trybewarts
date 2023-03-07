@@ -10,7 +10,7 @@ const inputLastName = document.querySelector('#input-lastname');
 const inputEmail = document.querySelector('#input-email');
 const inputCasa = document.querySelector('#house');
 const family = document.querySelectorAll('#family');
-const allRate = document.querySelectorAll('.rate');
+const allRate = document.querySelectorAll('#avaliation');
 const form = document.querySelector('#evaluation-form');
 
 textArea.addEventListener('keyup', () => {
