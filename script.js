@@ -7,9 +7,11 @@ const textArea = document.querySelector('textarea');
 const count = document.querySelector('#counter');
 const inputName = document.querySelector('#input-name');
 const inputLastName = document.querySelector('#input-lastname');
-const form = document.querySelector('#evaluation-form');
 const inputEmail = document.querySelector('#input-email');
 const inputCasa = document.querySelector('#house');
+const family = document.querySelectorAll('#family');
+const allRate = document.querySelectorAll('.rate');
+const form = document.querySelector('#evaluation-form');
 
 textArea.addEventListener('keyup', () => {
   const limit = 500 - textArea.value.length;
@@ -31,20 +33,44 @@ agreed.addEventListener('click', (event) => {
   }
 });
 
+const clearForm = () => { form.innerHTML = ''; };
+let inputFamily = '';
+let inputRate = '';
+
+family.forEach((radio) => {
+  radio.addEventListener('click', (event) => {
+    inputFamily = event.target.value;
+  });
+});
+
+allRate.forEach((rate) => {
+  rate.addEventListener('click', (event) => {
+    inputRate = event.target.value;
+  });
+});
+
+function checkSubjects() {
+  let personSubjects = '';
+  const checkedButtons = document.querySelectorAll('.subject:checked');
+  for (let i = 0; i < checkedButtons.length; i += 1) {
+    personSubjects += checkedButtons[i].value;
+    if (i + 1 !== checkedButtons.length) {
+      personSubjects += ', ';
+    }
+  }
+  return personSubjects;
+}
+
 btnSubmit.addEventListener('click', (event) => {
   event.preventDefault();
-  const name = document.createElement('span');
-  const emailB = document.createElement('span');
-  const casa = document.createElement('span');
-  const house = inputCasa.options[inputCasa.selectedIndex].text;
-  const femSel = document.querySelector('input[name="family"]:checked').value;
-  const materia = document.querySelectorAll('input[class="subject"]:checked').value;
-  name.innerText = `Nome: ${inputName.value} ${inputLastName.value}`;
-  emailB.innerText = `Email: ${inputEmail.value}`;
-  casa.innerText = `Casa: ${house}`;
-  form.innerHTML = `${name.innerText} 
-  ${emailB.innerText} 
-  ${casa.innerText} 
-  Família: ${femSel}
-  Matérias: ${materia}`;
+  const formAnswer = (`
+  Nome: ${inputName.value} ${inputLastName.value}
+  Email: ${inputEmail.value}
+  Casa: ${inputCasa.value}
+  Família: ${inputFamily}
+  Matérias: ${checkSubjects()}
+  Avaliação: ${inputRate}
+  Observações: ${textArea.value}`);
+  clearForm();
+  form.innerHTML = formAnswer;
 });
