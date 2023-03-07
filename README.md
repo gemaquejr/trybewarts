@@ -4,7 +4,7 @@ Quinto projeto desenvolvido no módulo de Fundamentos do Curso de Desenvolviment
 
 ![preview](.github/preview.png)
 
-O projeto consistia em desenvolver uma página web que contém uma paleta de cores funcional que poderá ser utilizada para criar desenhos em pixels.
+O projeto consistia em desenvolver uma página de formulário da Escola de Magia de Trybewarts, em que as pessoas estudantes poderão enviar seus feedbacks sobre a escola. O tema desse projeto é baseado na obra 'Harry Potter', de J. K. Rowling, já que programar é o mais próximo que podemos chegar de algo verdadeiramente mágico!.
 
 ## 🚀 Tecnologia
 
